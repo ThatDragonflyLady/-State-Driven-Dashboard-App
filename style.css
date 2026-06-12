@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #69055a;
+  --card-bg:#00334F;
+  --primary: #4a6fa5;
+  --success: #2ecc71;
+  --danger:#e89313;
+  --text:#f2f2f2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.danger-btn {
+  background-color: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  margin-top: 15px;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: var(--success);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.delete-btn {
+  background: none;
+  color: var(--danger);
+  border: none;
+  cursor: pointer;
+  width: auto;
+  padding: 0 5px;
+}
