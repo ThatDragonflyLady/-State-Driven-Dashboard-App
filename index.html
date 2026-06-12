@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Requirements Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Assignment Tracker</h1>
+  </header>
+
+  <main class="dashboard-grid">
+    <section class="card form-section">
+      <h2>Add Requirements</h2>
+      <form id="assignment-form">
+        <div class="input-group">
+          <label for="assignment-title">Assignment Title</label>
+          <input type="text" id="assignment-title" placeholder="e.g., History Term Paper">
+        </div>
+        <div class="input-group">
+          <label for="requirement-input">Requirement Item</label>
+          <input type="text" id="requirement-input" placeholder="e.g., Must include 3 sources">
+        </div>
+        <button type="submit" id="add-btn">Add Requirement</button>
+      </form>
+      <button id="reset-btn" class="danger-btn">Clear Assignment</button>
+    </section>
+
+    <section class="card progress-section">
+      <h2 id="display-title">No Assignment Set</h2>
+      <div class="metrics">
+        <div class="percentage" id="percent-text">0% Done</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="stats-text">0 of 0 tasks completed</p>
+      </div>
+    </section>
+
+    <section class="card checklist-section">
+      <h2>Requirements Checklist</h2>
+      <ul id="requirements-list">
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
